@@ -1,0 +1,243 @@
+local UserInputService = game:GetService("UserInputService")
+
+local keybind = Enum.KeyCode.Q
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "RingOff"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local UserInputService = game:GetService("UserInputService")
+
+local keybind = Enum.KeyCode.T
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "PunchSelf"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local UserInputService = game:GetService("UserInputService")
+
+local keybind = Enum.KeyCode.R
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "Sleep"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local UserInputService = game:GetService("UserInputService")
+
+local keybind = Enum.KeyCode.B
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "GiveStake"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local UserInputService = game:GetService("UserInputService")
+
+local keybind = Enum.KeyCode.G
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "StandStill"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local UserInputService = game:GetService("UserInputService")
+
+local keybind = Enum.KeyCode.L
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "AllowMove"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local keybind = Enum.KeyCode.M
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "WerewolfTurn"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
+
+local keybind = Enum.KeyCode.N
+
+local function iskeybinddown()
+	return UserInputService:IsKeyDown(keybind)
+end
+
+
+local function Input(input, gameProcessedEvent)
+	local localplr = game.Players.LocalPlayer
+	local mouse = localplr:GetMouse()
+	if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+			plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+			if plr ~=nil then
+				local A_1 = "DontSiphon"
+				local A_2 = 
+					{
+						[1] = game:GetService("Workspace").Live[plr.Name]
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+				Event:FireServer(A_1, A_2)
+				print(plr.Name)
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:Connect(Input)
