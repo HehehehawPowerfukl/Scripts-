@@ -1,0 +1,32 @@
+local Plr = game.Players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+local mouse = Plr:GetMouse()
+--local Debounce = true
+local Key = 'V'
+local db = true
+
+UserInputService.InputBegan:Connect(function(input, IsTyping)
+if IsTyping then return end
+if input.KeyCode == Enum.KeyCode[Key] then
+
+for i, Player in pairs (game.Players:GetPlayers()) do
+if Player.Character ~= nil and Player ~= Plr then
+local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+if mag < 999999 then
+local Target = Player.Character or Player.CharacterAdded:Wait()
+
+local A_1 = "Magic"
+local A_2 = 
+{
+    [1] = "FireSpell",
+    [2] = Target
+}
+local Event = game:GetService("ReplicatedStorage").Events.Witch
+Event:FireServer(A_1, A_2)
+
+
+end
+end
+end
+end
+end)
