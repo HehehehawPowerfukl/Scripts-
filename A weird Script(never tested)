@@ -1,0 +1,847 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local Compulsion = Instance.new("TextButton")
+local SuperFeed = Instance.new("TextButton")
+local RemoveWolfBite = Instance.new("TextButton")
+local WolfBiteU = Instance.new("TextButton")
+local InfiniteStamina = Instance.new("TextButton")
+local RemoveChannel = Instance.new("TextButton")
+local WitchKeybinds = Instance.new("TextButton")
+local YMotus = Instance.new("TextButton")
+local Respawn = Instance.new("TextButton")
+local HereticStake = Instance.new("TextButton")
+local AdminCommands = Instance.new("TextButton")
+local Immortal = Instance.new("TextButton")
+local StakeAll = Instance.new("TextButton")
+local FindQetsiyah = Instance.new("TextButton")
+local GamerLib = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Archivable = false
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+Main.Position = UDim2.new(0.166633159, 0, 0.316300035, 0)
+Main.Size = UDim2.new(0, 610, 0, 313)
+Main.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+Main.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(-0.021964008, 0, -0.00057009561, 0)
+TextLabel.Size = UDim2.new(0, 610, 0, 50)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "Mystic GUI"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(32, 129, 255)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(24, 96, 255)), ColorSequenceKeypoint.new(0.56, Color3.fromRGB(21, 85, 255)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(3, 7, 255)), ColorSequenceKeypoint.new(0.87, Color3.fromRGB(8, 28, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 129, 255))}
+UIGradient.Parent = TextLabel
+
+Compulsion.Name = "Compulsion"
+Compulsion.Parent = Main
+Compulsion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Compulsion.Position = UDim2.new(0.0606557354, 0, 0.0393386558, 0)
+Compulsion.Size = UDim2.new(0, 134, 0, 33)
+Compulsion.Font = Enum.Font.SourceSans
+Compulsion.Text = "Compulsion"
+Compulsion.TextColor3 = Color3.fromRGB(0, 0, 0)
+Compulsion.TextSize = 14.000
+Compulsion.MouseButton1Down:connect(function()
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.G
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local A_1 = "GiveStake"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.E
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local A_1 = "PunchSelf"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.B
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local A_1 = "RingOff"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.Q
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~=nil then
+					local A_1 = "StandStill"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.T
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~=nil then
+					local A_1 = "Sleep"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+
+
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.K
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local A_1 = "WerewolfTurn"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+end)
+
+SuperFeed.Name = "Super Feed"
+SuperFeed.Parent = Main
+SuperFeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SuperFeed.Position = UDim2.new(0.678688526, 0, 0.0393386558, 0)
+SuperFeed.Size = UDim2.new(0, 134, 0, 33)
+SuperFeed.Font = Enum.Font.SourceSans
+SuperFeed.Text = "Super Feed"
+SuperFeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+SuperFeed.TextSize = 14.000
+SuperFeed.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'C'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Feed"
+			local A_2 = 
+				{
+					[1] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Vampire
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Feed"
+					local A_2 = 
+						{
+							[1] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Vampire
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+
+end)
+
+
+RemoveWolfBite.Name = "Remove Wolf Bite"
+RemoveWolfBite.Parent = Main
+RemoveWolfBite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoveWolfBite.Position = UDim2.new(0.678688526, 0, 0.0746864378, 0)
+RemoveWolfBite.Size = UDim2.new(0, 134, 0, 33)
+RemoveWolfBite.Font = Enum.Font.SourceSans
+RemoveWolfBite.Text = "Remove Venom"
+RemoveWolfBite.TextColor3 = Color3.fromRGB(0, 0, 0)
+RemoveWolfBite.TextSize = 14.000
+RemoveWolfBite.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+
+	local Bite = Character:WaitForChild("WerewolfVenom")
+	Bite:Destroy()
+
+end)
+
+WolfBiteU.Name = "Wolf Bite U"
+WolfBiteU.Parent = Main
+WolfBiteU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WolfBiteU.Position = UDim2.new(0.375409842, 0, 0.107183591, 0)
+WolfBiteU.Size = UDim2.new(0, 134, 0, 33)
+WolfBiteU.Font = Enum.Font.SourceSans
+WolfBiteU.Text = "Wolf Bite Key: U"
+WolfBiteU.TextColor3 = Color3.fromRGB(0, 0, 0)
+WolfBiteU.TextSize = 14.000
+WolfBiteU.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'U'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Bite"
+			local A_2 = 
+				{
+					[1] = false, 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Werewolf
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Bite"
+					local A_2 = 
+						{
+							[1] = false, 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Werewolf
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+end)
+
+InfiniteStamina.Name = "Infinite Stamina"
+InfiniteStamina.Parent = Main
+InfiniteStamina.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteStamina.Position = UDim2.new(0.679639339, 0, 0.107183583, 0)
+InfiniteStamina.Size = UDim2.new(0, 134, 0, 33)
+InfiniteStamina.Font = Enum.Font.SourceSans
+InfiniteStamina.Text = "Inf Stamina"
+InfiniteStamina.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteStamina.TextSize = 14.000
+InfiniteStamina.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Stamina = Character:WaitForChild("Stamina")
+	local Max = Stamina.Max
+
+	Max.Value = 5000
+	wait()
+	Stamina.Value = 999999999999999999
+end)
+
+RemoveChannel.Name = "Remove Channel"
+RemoveChannel.Parent = Main
+RemoveChannel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoveChannel.Position = UDim2.new(0.063934423, 0, 0.0746864304, 0)
+RemoveChannel.Size = UDim2.new(0, 134, 0, 33)
+RemoveChannel.Font = Enum.Font.SourceSans
+RemoveChannel.Text = "Delete Channel"
+RemoveChannel.TextColor3 = Color3.fromRGB(0, 0, 0)
+RemoveChannel.TextSize = 14.000
+RemoveChannel.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+
+	local Channel = Character:WaitForChild("Channeling")
+	Channel:Destroy()
+end)
+
+WitchKeybinds.Name = "Witch Keybinds"
+WitchKeybinds.Parent = Main
+WitchKeybinds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WitchKeybinds.Position = UDim2.new(0.376360655, 0, 0.0746864378, 0)
+WitchKeybinds.Size = UDim2.new(0, 134, 0, 33)
+WitchKeybinds.Font = Enum.Font.SourceSans
+WitchKeybinds.Text = "Witchie Keybinds"
+WitchKeybinds.TextColor3 = Color3.fromRGB(0, 0, 0)
+WitchKeybinds.TextSize = 14.000
+WitchKeybinds.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'T'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Teleport", 
+					[2] = mouse.Hit.p
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+		end
+	end)
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'B'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Invisibility"
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+		end
+	end)
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'N'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Explosion", 
+					[2] = mouse.Hit.p
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+		end
+	end)
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'Q'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "SleepSpell", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "SleepSpell", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+
+
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'M'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "TelekineticHeart", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "TelekineticHeart", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'L'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "DisableRing", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "DisableRing", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'K'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "EnableRing", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "EnableRing", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+end)
+
+YMotus.Name = "Y Motus"
+YMotus.Parent = Main
+YMotus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+YMotus.Position = UDim2.new(0.375409812, 0, 0.039338652, 0)
+YMotus.Size = UDim2.new(0, 134, 0, 33)
+YMotus.Font = Enum.Font.SourceSans
+YMotus.Text = "Y Motus"
+YMotus.TextColor3 = Color3.fromRGB(0, 0, 0)
+YMotus.TextSize = 14.000
+YMotus.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'Y'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Motus"
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+		end
+	end)
+end)
+
+Respawn.Name = "Respawn"
+Respawn.Parent = Main
+Respawn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Respawn.Position = UDim2.new(0.0632459, 0, 0.107183583, 0)
+Respawn.Size = UDim2.new(0, 134, 0, 33)
+Respawn.Font = Enum.Font.SourceSans
+Respawn.Text = "Respawn"
+Respawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+Respawn.TextSize = 14.000
+Respawn.MouseButton1Down:connect(function()
+	local Event = game:GetService("ReplicatedStorage").Events.Respawn
+	Event:FireServer()
+end)
+
+HereticStake.Name = "Heretic Stake"
+HereticStake.Parent = Main
+HereticStake.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HereticStake.Position = UDim2.new(0.375409842, 0, 0.180645153, 0)
+HereticStake.Size = UDim2.new(0, 134, 0, 33)
+HereticStake.Font = Enum.Font.SourceSans
+HereticStake.Text = "Mortal Respawn"
+HereticStake.TextColor3 = Color3.fromRGB(0, 0, 0)
+HereticStake.TextSize = 14.000
+HereticStake.MouseButton1Down:connect(function()
+	local LocalPlayer = game.Players.LocalPlayer
+	local Character = LocalPlayer.Character
+	local Humanoid = Character.Humanoid
+	local Mouse = LocalPlayer:GetMouse()
+	local Respawn = game:GetService("ReplicatedStorage").Events.Respawn
+	Respawn:FireServer()
+	wait(1)
+	local Morph = game:GetService("ReplicatedStorage").Events.Morph
+	Morph:FireServer("Mortal")
+
+end)
+
+AdminCommands.Name = "Admin Commands"
+AdminCommands.Parent = Main
+AdminCommands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AdminCommands.Position = UDim2.new(0.0606557392, 0, 0.180645168, 0)
+AdminCommands.Size = UDim2.new(0, 134, 0, 33)
+AdminCommands.Font = Enum.Font.SourceSans
+AdminCommands.Text = "Admin Cmds"
+AdminCommands.TextColor3 = Color3.fromRGB(0, 0, 0)
+AdminCommands.TextSize = 14.000
+AdminCommands.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+Immortal.Name = "Immortal"
+Immortal.Parent = Main
+Immortal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Immortal.Position = UDim2.new(0.680327892, 0, 0.143225804, 0)
+Immortal.Size = UDim2.new(0, 134, 0, 33)
+Immortal.Font = Enum.Font.SourceSans
+Immortal.Text = "Immortality"
+Immortal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Immortal.TextSize = 14.000
+Immortal.MouseButton1Down:connect(function()
+	while true do
+		local args = {
+			[1] = false
+		}
+
+		game:GetService("Players").LocalPlayer.Character.BurnInSun.Control:FireServer(unpack(args))
+		wait(0)
+	end
+
+end)
+
+StakeAll.Name = "Stake All"
+StakeAll.Parent = Main
+StakeAll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StakeAll.Position = UDim2.new(0.375409812, 0, 0.143225804, 0)
+StakeAll.Size = UDim2.new(0, 134, 0, 33)
+StakeAll.Font = Enum.Font.SourceSans
+StakeAll.Text = "Stake All"
+StakeAll.TextColor3 = Color3.fromRGB(0, 0, 0)
+StakeAll.TextSize = 14.000
+StakeAll.MouseButton1Down:connect(function()
+	local players = game.Workspace.Live
+
+	for _,player in pairs (players:GetChildren()) do
+		local link = game.Players:GetPlayerFromCharacter(player)
+		if player:FindFirstChild("Humanoid") then
+			if  link == game.Players.LocalPlayer then
+				return
+			else
+				local A_1 = player
+				local A_2 = "Original"
+				local Event = game:GetService("ReplicatedStorage").Events.Stake
+				Event:FireServer(A_1, A_2)
+			end
+		end
+	end
+
+end)
+
+
+FindQetsiyah.Name = "Find Qetsiyah"
+FindQetsiyah.Parent = Main
+FindQetsiyah.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FindQetsiyah.Position = UDim2.new(0.063934423, 0, 0.143225804, 0)
+FindQetsiyah.Size = UDim2.new(0, 134, 0, 33)
+FindQetsiyah.Font = Enum.Font.SourceSans
+FindQetsiyah.Text = "Find Qet"
+FindQetsiyah.TextColor3 = Color3.fromRGB(0, 0, 0)
+FindQetsiyah.TextSize = 14.000
+FindQetsiyah.MouseButton1Down:connect(function()
+	local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			Player.CFrame = Qetsiyah.HumanoidRootPart.CFrame
+		end
+	end
+end)
+
+GamerLib.Name = "Gamer Lib"
+GamerLib.Parent = Main
+GamerLib.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GamerLib.Position = UDim2.new(0.678688526, 0, 0.180645168, 0)
+GamerLib.Size = UDim2.new(0, 134, 0, 33)
+GamerLib.Font = Enum.Font.SourceSans
+GamerLib.Text = "Gamer Lib"
+GamerLib.TextColor3 = Color3.fromRGB(0, 0, 0)
+GamerLib.TextSize = 14.000
+GamerLib.MouseButton1Down:connect(function()
+	loadstring(game:GetObjects("rbxassetid://6914844894")[1].Source)()
+end)
+
+-- Scripts:
+
+local function KCBSP_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(KCBSP_fake_script)()
